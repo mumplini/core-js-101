@@ -188,7 +188,6 @@ const cssSelectorBuilder = {
 
   combine(selector1, combinator, selector2) {
     const el = [...selector1.cssItems, { type: 'combinator', value: ` ${combinator} ` }, ...selector2.cssItems];
-    console.log(el, this.cssItems);
     const builder = this.continueBuild(el);
     return builder;
   },
